@@ -11,3 +11,7 @@ map("n", "<leader>fm", function()
 end, { desc = "File Format with conform" })
 
 map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
+
+map("n", "<leader>l", function()
+  require("lint").try_lint()
+end, { desc = "Trigger linting for current file" })
